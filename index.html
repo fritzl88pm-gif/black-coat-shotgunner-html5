@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Black Coat Shotgunner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="game" aria-label="Black Coat Shotgunner game canvas"></canvas>
+
+  <div id="hud" aria-live="polite">
+    <div><span class="tag">HP</span><span id="hudHealth">6/6</span></div>
+    <div><span class="tag">Shells</span><span id="hudAmmo">6/6</span></div>
+    <div><span class="tag">Enemies</span><span id="hudEnemies">0</span></div>
+    <div id="hudStatus">Reach the extraction sign.</div>
+  </div>
+
+  <div id="message" class="hidden" role="dialog" aria-modal="true">
+    <div class="panel">
+      <h1 id="messageTitle">Ready</h1>
+      <p id="messageText">Fight through the block and reach the end zone.</p>
+      <button id="restartButton" type="button">Restart</button>
+    </div>
+  </div>
+
+  <div id="mobileControls" aria-label="Touch controls">
+    <div class="cluster move">
+      <button class="touch-btn" data-action="left" type="button" aria-label="Move left">Left</button>
+      <button class="touch-btn" data-action="right" type="button" aria-label="Move right">Right</button>
+    </div>
+    <div class="cluster actions">
+      <button class="touch-btn" data-action="jump" type="button" aria-label="Jump">Jump</button>
+      <button class="touch-btn shoot" data-action="shoot" type="button" aria-label="Shoot">Shoot</button>
+      <button class="touch-btn" data-action="reload" type="button" aria-label="Reload">Reload</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
